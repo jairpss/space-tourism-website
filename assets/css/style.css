@@ -123,6 +123,23 @@ select {
   max-width: 80rem;
 }
 
+.grid-container {
+  display: grid;
+  column-gap: var(--container-gap, 2rem);
+  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(
+      2rem,
+      1fr
+    );
+}
+
+.grid-container > *:first-child {
+  grid-column: 2;
+}
+
+.grid-container > *:last-child {
+  grid-column: 3;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -234,7 +251,7 @@ select {
 
 .large-button {
   position: relative;
-  display: grid;
+  display: inline-grid;
   z-index: 1;
   place-items: center;
   padding: 0 2em;
@@ -252,7 +269,7 @@ select {
   background: hsl(var(--clr-white) / 0.15);
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 500ms linear, transform 750ms ease-in-out;
+  transition: opacity 500ms linear, transform 500ms ease-in-out;
 }
 
 .large-button:hover::after,
