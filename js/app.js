@@ -1,3 +1,5 @@
+// -- NAVIGATION --
+
 const nav = document.querySelector(".primary-navigation")
 const navToggle = document.querySelector(".mobile-nav-toggle")
 
@@ -12,3 +14,7 @@ navToggle.addEventListener("click", () => {
         navToggle.setAttribute("aria-expanded", false)
     }
 })
+
+
+// -- TABS --
+
